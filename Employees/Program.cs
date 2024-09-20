@@ -18,17 +18,7 @@ namespace Employees
                 Console.WriteLine("\n (0) - Exit");
                 Console.WriteLine("Please, inform the desired option ");
                 var input = Console.ReadLine();
-                var opcao = 0;
-                if (input == null || input == string.Empty)
-                {
-
-                    Console.WriteLine("\n Input null, please make");
-                    Main(args);
-                }
-                else
-                {
-                    opcao = int.Parse(input);
-                }
+                var opcao = int.Parse(CheckStringNullOrEmpty(input));
 
                 switch (opcao)
                 {
@@ -130,7 +120,7 @@ namespace Employees
                         Console.Clear();
                         Console.WriteLine("\n Employee ID: \n ");
                         var EmployeeIDConsult = Console.ReadLine();
-                        var itemById = EmployeeRepositoryFindByID.FindById(EmployeeIDConsult);
+                        var itemById = EmployeeRepositoryFindByID.FindById(CheckStringNullOrEmpty(EmployeeIDConsult));
                         if (itemById != null)
                         {
                             Console.WriteLine("Employee ID: " + itemById.EmployeeId);

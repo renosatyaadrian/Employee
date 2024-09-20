@@ -34,7 +34,6 @@ namespace Employees
                         var tempEmployeeExist = employeeRepositoryFindById.FindById(employeeIdInsert);
                         if (tempEmployeeExist != null) throw new Exception("Employee Exist");
 
-
                         Console.WriteLine("\n Employee Name: ");
                         employeeInsert.FullName = CheckStringNullOrEmpty(Console.ReadLine());
                         Console.WriteLine("\n Employee Birth Date: ");
@@ -92,6 +91,7 @@ namespace Employees
                             Console.Clear();
                             Main(args);
                         }
+
                         break;
 
                     // Get All Employee
@@ -112,6 +112,7 @@ namespace Employees
                         Console.ReadKey();
                         Console.Clear();
                         Main(args);
+
                         break;
 
                     // Get Employee by Id
@@ -138,13 +139,12 @@ namespace Employees
                             Console.Clear();
                             Main(args);
                         }
+
                         break;
                 }
-
             }
             catch (Exception e)
             {
-
                 Console.WriteLine("\n Error: " + e.Message);
             }
             finally

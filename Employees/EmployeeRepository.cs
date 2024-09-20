@@ -1,5 +1,4 @@
 ﻿using Dapper;
-using Employees;
 using Microsoft.Data.SqlClient;
 
 namespace Employees.Repositories

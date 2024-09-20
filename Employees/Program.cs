@@ -1,6 +1,4 @@
 ﻿using Employees.Repositories;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 
 namespace Employees
